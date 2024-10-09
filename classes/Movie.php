@@ -13,9 +13,9 @@ class Movie
         $this->filmLength = $filmLength;
     }
 
-    function isBoring($filmLength)
+    function isBoring()
     {
-        if ($filmLength > 130) {
+        if ($this->filmLength > 130) {
             return true;
         } else {
             return false;
@@ -24,9 +24,8 @@ class Movie
 }
 
 $matrix = new Movie('Matrix', 'Action', 136);
-var_dump($matrix);
-var_dump($matrix->isBoring($matrix->filmLength));
 
 $inception = new Movie('Inception', 'Sci-fi', 128);
-var_dump($inception);
-var_dump($inception->isBoring($inception->filmLength));
+
+
+$movies = [$matrix, $inception];
