@@ -1,19 +1,21 @@
 <?php
+include_once __DIR__ . "/./GenreClass.php";
 
 class Movie
 {
     public $title;
-    public $genre;
+    // public $genre;
     public $filmLength;
+    public GenreClass $genre;
 
-    function __construct(string $title, string $genre, int $filmLength)
+    function __construct(string $title, GenreClass $genre, int $filmLength)
     {
         $this->title = $title;
         $this->genre = $genre;
         $this->filmLength = $filmLength;
     }
 
-    function isBoring()
+    public function isBoring()
     {
         if ($this->filmLength > 130) {
             return true;
@@ -21,11 +23,13 @@ class Movie
             return false;
         }
     }
+
+    public function isChildFriendly() {}
 }
 
-$matrix = new Movie('Matrix', 'Action', 136);
+$matrix = new Movie('Matrix', $action, 136);
 
-$inception = new Movie('Inception', 'Sci-fi', 128);
+$inception = new Movie('Inception', $scifi, 128);
 
 
 $movies = [$matrix, $inception];
