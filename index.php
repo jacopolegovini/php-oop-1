@@ -22,15 +22,21 @@ include_once __DIR__ . "/./db.php";
                     <li>
                         Titolo:
                         <?php
-                    echo $movie->title;
-                    // echo $movie->genre->isForChild();
-                    ?>
+                            echo $movie->title;
+                            // echo $movie->genre->isForChild();
+                            ?>
                     </li>
                     <li>
                         Durata:
                         <?php
-                    echo $movie->filmLength;
-                    ?>
+                            echo $movie->filmLength;
+                            ?>
+                    </li>
+                    <li>
+                        Genere:
+                        <?php
+                            echo $movie->genre->name;
+                            ?>
                     </li>
                 </ul>
 
