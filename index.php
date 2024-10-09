@@ -1,32 +1,22 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
 
-class Movie
-{
-    public $title;
-    public $genre;
-    public $filmLength;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+</head>
 
-    function __construct($title, $genre, $filmLength)
-    {
-        $this->title = $title;
-        $this->genre = $genre;
-        $this->filmLength = $filmLength;
-    }
+<body>
+    <main>
+        <h1>Movie</h1>
+        <h2>Lista di Film</h2>
+        <ul>
+            <li>
 
-    function isBoring($filmLength)
-    {
-        if ($filmLength > 130) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-}
+            </li>
+        </ul>
+    </main>
+</body>
 
-$matrix = new Movie('Matrix', 'Action', 136);
-var_dump($matrix);
-var_dump($matrix->isBoring($matrix->filmLength));
-
-$inception = new Movie('Inception', 'Sci-fi', 128);
-var_dump($inception);
-var_dump($inception->isBoring($inception->filmLength));
+</html>
