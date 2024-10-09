@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ . "/./classes/Movie.php";
+include_once __DIR__ . "/./db.php";
 ?>
 
 <!DOCTYPE html>
@@ -18,8 +18,24 @@ include_once __DIR__ . "/./classes/Movie.php";
         <ul>
             <?php foreach ($movies as $movie) { ?>
             <li>
-                Titolo: <?php echo $movie->title ?>
+                <ul>
+                    <li>
+                        Titolo:
+                        <?php
+                    echo $movie->title;
+                    // echo $movie->genre->isForChild();
+                    ?>
+                    </li>
+                    <li>
+                        Durata:
+                        <?php
+                    echo $movie->filmLength;
+                    ?>
+                    </li>
+                </ul>
+
             </li>
+
             <?php } ?>
         </ul>
     </main>
